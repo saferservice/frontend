@@ -1,0 +1,40 @@
+<ion-menu side="start"
+          menuId="primerMenu"
+          contentId="principal">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="toggleMenu()">
+          <ion-icon slot="end" name="md-close"></ion-icon> 
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+    <ion-list>
+      <ion-menu-toggle>
+        <ion-item routerLink="/perfil-cliente" detail>
+          <ion-icon slot="start" color="primary" name="md-contact"></ion-icon>
+          <ion-label>Mis datos</ion-label>
+        </ion-item>
+        <ion-item routerLink="/terminos-condiciones" detail>
+          <ion-icon slot="start" color="primary" name="md-information-circle"></ion-icon>
+          <ion-label>Términos y condiciones</ion-label>
+        </ion-item>
+        <ion-item routerLink="/sugerencias-reclamos" detail>
+          <ion-icon slot="start" color="primary" name="ios-create"></ion-icon>
+          <ion-label>Sugerencias y/o reclamos</ion-label>
+        </ion-item>
+        <ion-item routerLink="/nosotros" detail>
+          <ion-icon slot="start" color="primary" name="md-people"></ion-icon>
+          <ion-label>Acerca de nosotros</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+
+  </ion-content>
+
+</ion-menu>

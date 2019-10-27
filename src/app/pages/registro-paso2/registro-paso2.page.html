@@ -1,0 +1,83 @@
+<ion-header no-border translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Regresar" defaultHref="/registro"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+  
+  <ion-content>
+  
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="ion-text-center">
+            <ion-text color="primary">
+              <h1>Registrarse</h1>
+              <h1>2/3</h1>
+            </ion-text>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+    <form #formulario="ngForm">
+      
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-list>
+              <ion-item>
+                <ion-label position="floating">Nombre</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <ion-list>
+              <ion-item>
+                <ion-label position="floating">Apellido</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <ion-list>
+              <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input type="email"></ion-input>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <ion-list>
+              <ion-item>
+                <ion-label position="floating">Teléfono</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="12">
+            <ion-button
+              type="button"
+              expand="full"
+              color="primary"
+              routerLink="/registro-paso3">
+              Siguiente 2/3
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+    </form>
+  
+  </ion-content>

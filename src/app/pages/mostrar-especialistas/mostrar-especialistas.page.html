@@ -1,0 +1,110 @@
+<app-menu></app-menu>
+
+<ion-header id="principal" no-border translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!--
+      <ion-button (click)="toggleMenu()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+      <ion-back-button text="Regresar" defaultHref="/home-cliente"></ion-back-button>
+      -->
+      <ion-menu-button color="primary"
+                       menu="primerMenu"></ion-menu-button>
+      <ion-back-button text="Regresar" defaultHref="/home-cliente"></ion-back-button>
+
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize">Especialistas</ion-title>
+  </ion-toolbar>
+  <ion-searchbar animated
+                (ionChange)="buscar( $event )">  
+  </ion-searchbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card *ngFor="let especialidad of especialidades | filtroEspecialista: textoBuscar: 'title'">
+      <ion-item color="primary">
+        <ion-icon color="light" slot="start" name="ios-contact"></ion-icon>
+        <p>Especialidad</p>
+        <ion-button 
+          color="light" 
+          slot="end"
+          routerLink="/detalle-especialista">Contactar</ion-button>
+      </ion-item>
+      <ion-item-sliding>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="12">
+              <ion-text>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </ion-text>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item-sliding>
+      <ion-item-divider>
+        <ion-text slot="start">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-text>$ 15.000</ion-text>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-text>
+        <ion-text slot="end">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-icon color="dark" name="md-pin"></ion-icon>
+              </ion-col>
+              <ion-col>
+                7.3Km
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-text>
+      </ion-item-divider>
+      <ion-card-content>
+        <ion-slides pager="true">
+          <ion-slide>
+            <ion-img src="/assets/slides/user-6.svg"></ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img src="/assets/slides/music-player-2.svg"></ion-img>
+          </ion-slide>
+          <ion-slide>
+            <ion-img src="/assets/slides/photos.svg"></ion-img>
+          </ion-slide>
+        </ion-slides>
+      </ion-card-content>
+      <ion-item color="primary">
+        <ion-text slot="start">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-icon color="light" name="md-thumbs-up"></ion-icon>
+              </ion-col>
+              <ion-col>
+                10
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-text>
+        <ion-text slot="end">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-icon color="light" name="md-thumbs-down"></ion-icon>
+              </ion-col>
+              <ion-col>
+                10
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-text>
+      </ion-item>
+    </ion-card>
+
+</ion-content>

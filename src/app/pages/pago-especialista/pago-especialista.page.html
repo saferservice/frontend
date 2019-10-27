@@ -1,0 +1,57 @@
+<app-menu></app-menu>
+
+<ion-header id="principal" no-border translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="primary"
+                       menu="primerMenu"></ion-menu-button>
+      <ion-back-button text="Regresar" defaultHref="/comprobar-trabajo"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize">Pago</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <div class="ion-text-center">
+          <p>Formas de pago</p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-list>
+          <ion-item>
+            <ion-icon slot="start" color="primary" name="md-card"></ion-icon>
+            <ion-label>Tarjeta de devito</ion-label>
+            <ion-radio></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-icon slot="start" color="primary" name="md-cash"></ion-icon>
+            <ion-label>Efectivo</ion-label>
+            <ion-radio></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-icon slot="start" color="primary" name="md-home"></ion-icon>
+            <ion-label>Transferencia</ion-label>
+            <ion-radio></ion-radio>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button
+          color="primary"
+          expand="full"
+          routerLink="/evaluar-especialista">
+          Pagar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,68 @@
+<app-menu></app-menu>
+
+<ion-header id="principal" no-border translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="primary"
+                       menu="primerMenu"></ion-menu-button>
+      <ion-back-button text="Regresar" defaultHref="/detalle-especialista"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize">Resumen</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-text color="primary">
+          <h3>Resumen</h3>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-list>
+          <ion-item>
+            <ion-text color="primary">
+              <p>Resumen</p>
+            </ion-text>
+          </ion-item>
+          <ion-item>
+            <ion-text color="primary">
+              <p>Resumen</p>
+            </ion-text>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button 
+          color="danger"
+          expand="full"
+          (click)="cancelarOperacion()"> 
+          Cancelar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button
+          color="primary"
+          expand="full"
+          routerLink="/comprobar-trabajo">
+          Ver precio
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
+
+

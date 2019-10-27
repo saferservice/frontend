@@ -1,0 +1,115 @@
+<app-menu></app-menu>
+
+<ion-header id="principal" no-border translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!--
+      <ion-button>
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+      -->
+      <ion-menu-button color="primary"
+                       menu="primerMenu"></ion-menu-button>
+      <ion-back-button text="Regresar" defaultHref="/mostrar-especialistas"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize">CV</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-toolbar>
+
+  <ion-segment (ionChange)="segmentChanged($event)"> 
+    <ion-segment-button value="datos">
+      <ion-label>Datos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="experiencia">
+      <ion-label>Experiencia</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="recomendacion">
+      <ion-label>Recomendación</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+</ion-toolbar>
+
+<ion-content>
+
+  <ion-grid *ngIf="valorSegmento === 'datos'">
+    <ion-row>
+      <ion-col size="8">
+        <ion-row>
+          <ion-col>
+            <ion-thumbnail>
+              <ion-img src="/assets/slides/photos.svg"></ion-img>
+            </ion-thumbnail>
+          </ion-col>
+          <ion-col>
+            Datos de la persona
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="4">
+        7.3Km
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="valorSegmento === 'experiencia'">
+    <ion-row>
+      <ion-col size="12">
+        <ion-list>
+          <ion-item *ngFor="let i of [1,1,1,1,1,1,1,1,1,1]">
+            <p>Experiencia</p>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="valorSegmento === 'recomendacion'">
+    <ion-row>
+      <ion-col size="12">
+        <ion-list>
+          <ion-item *ngFor="let i of [1,1,1,1,1,1,1,1,1,1]">
+            <ion-avatar slot="start">
+              <ion-img src="/assets/slides/user-6.svg"></ion-img>
+            </ion-avatar>
+            <ion-label>Recomendación</ion-label>
+            <p slot="end" size="small">yyyy/mm/dd</p>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-fab vertical="bottom" horizontal="start" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="ios-chatbubbles"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="ios-call"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
+</ion-content>
+
+<ion-footer no-border translucent>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button 
+          expand="full" 
+          color="primary" 
+          routerLink="/resumen">
+          Siguiente
+          <ion-icon slot="end" name="ios-arrow-forward"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-footer>

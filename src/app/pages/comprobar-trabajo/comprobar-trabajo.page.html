@@ -1,0 +1,55 @@
+<app-menu></app-menu>
+
+<ion-header id="principal" no-border translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="primary"
+                       menu="primerMenu"></ion-menu-button>
+      <ion-back-button text="Regresar" defaultHref="/resumen"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize">Check</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-list>
+      <ion-row>
+        <ion-col size="12">
+          <ion-item class="ion-text-center">
+            <ion-label class="ion-text-wrap">
+              <ion-text color="dark">
+                <p>Total</p>
+                <h1>$15.000</h1>
+              </ion-text>
+            </ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button 
+          color="primary"
+          expand="full"
+          routerLink="/pago-especialista">
+          ¿Se realizó el trabajo?
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-button
+          color="danger"
+          expand="full">
+          Cancelar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

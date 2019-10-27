@@ -1,0 +1,74 @@
+<app-menu></app-menu>
+
+<ion-header id="principal" no-border translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <!--
+      <ion-button>
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+      -->
+      <ion-menu-button color="primary"
+                       menu="primerMenu"></ion-menu-button>
+      <ion-back-button text="Regresar" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize">HOME</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <ion-grid>
+
+    <ion-row>
+      <ion-col size="4">
+        <div class="ion-text-center">
+          <ion-button fill="clear" (click)="mostrarPop( $event )"><ion-icon name="close-circle-outline" size="large"></ion-icon></ion-button>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div class="ion-text-center">
+          <ion-button fill="clear" (click)="mostrarPop( $event )"><ion-icon name="close-circle-outline" size="large"></ion-icon></ion-button>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div class="ion-text-center">
+          <ion-button fill="clear" (click)="mostrarPop( $event )"><ion-icon name="close-circle-outline" size="large"></ion-icon></ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="4">
+        <div class="ion-text-center">
+          <ion-button fill="clear" (click)="mostrarPop( $event )"><ion-icon name="close-circle-outline" size="large"></ion-icon></ion-button>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div class="ion-text-center">
+          <ion-button fill="clear" (click)="mostrarPop( $event )"><ion-icon name="close-circle-outline" size="large"></ion-icon></ion-button>
+        </div>
+      </ion-col>
+      <ion-col size="4">
+        <div class="ion-text-center">
+          <ion-button fill="clear" (click)="mostrarPop( $event )"><ion-icon name="close-circle-outline" size="large"></ion-icon></ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <div>
+          <ion-button 
+            expand="full" 
+            color="primary"
+            routerLink="/mostrar-especialistas">
+            Buscar
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
